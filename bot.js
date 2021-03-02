@@ -54,15 +54,13 @@ bot.on('message', msg => {
     msg.channel.send('did you mean doggy?');
   }
   else if (msg.mentions.has(bot.user.id)) {
-    respo = ''
     client.send(
       "message",
       async response => {
           console.log(response);
-          respo = response
+          msg.channel.send(response);
       },
     );
-    msg.channel.send(respo);
   }
   
 });
