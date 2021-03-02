@@ -14,9 +14,6 @@ var responses = [
     'only wake the dreamer knows'
 ];
 
-
-
-
 bot.on('message', msg => {
   if (msg.content === 'hey offbeats bot') {
     msg.reply('hey, you are loved');
@@ -44,6 +41,10 @@ bot.on('message', msg => {
   }
   
   else if (message.startsWith('!question')) { 
+    var responses = [
+      'I can neither confirm nor deny',
+      'only wake the dreamer knows'
+  ];
     randomNumber = Math.floor(Math.random()*responses.length);
     msg.channel.send(responses[randomNumber]);
   }
