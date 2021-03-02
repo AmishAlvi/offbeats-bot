@@ -35,7 +35,7 @@ bot.on('message', msg => {
     msg.channel.send('I love Mr Static');
   }
   
-  else if (msg.startsWith('!question')) { 
+  else if (msg.content.startsWith('!question')) { 
     var responses = [
       'I can neither confirm nor deny',
       'only wake the dreamer knows'
