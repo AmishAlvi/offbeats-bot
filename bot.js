@@ -29,15 +29,12 @@ bot.on('message', msg => {
     } else {
       msg.reply('Please tag a valid user!');
     }
-  }
-
-  else if (msg.content.startsWith('!livenow')) {
+  } else if (msg.content.startsWith('!livenow')) {
     bot.user.setActivity("offbeat", {
         type: "STREAMING",
         url: "https://www.twitch.tv/theoffbeats"
       });
-  }
-  else if (msg.content.startsWith('!notlive')) {
+  } else if (msg.content.startsWith('!notlive')) {
     bot.user.setActivity("offbeats", {
         type: "GAME",
         url: "https://www.twitch.tv/theoffbeats"
@@ -45,8 +42,8 @@ bot.on('message', msg => {
   } else if (msg.content === '!static') {
     msg.channel.send('I love Mr Static');
   }
-
-  else if (message.isMemberMentioned(client.user)) { 
+  
+  if (message.isMemberMentioned(client.user)) { 
     randomNumber = Math.floor(Math.random()*textArray.length);
     msg.channel.send(responses[randomNumber]);
   }
