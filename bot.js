@@ -58,7 +58,7 @@ bot.on('message', msg => {
       "message",
       async response => {
           console.log(response);
-          msg.channel.send(response);
+          msg.reply(response);
       },
     );
   }
