@@ -53,7 +53,7 @@ bot.on('message', msg => {
   else if (msg.content === '!doogdoogsleydoogertons') {
     msg.channel.send('did you mean doggy?');
   }
-  else if (message.mentions.has(bot.user.id)) {
+  else if (msg.mentions.has(bot.user.id)) {
     respo = ''
     client.send(
       "message",
