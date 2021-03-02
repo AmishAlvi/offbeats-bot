@@ -48,5 +48,8 @@ bot.on('message', msg => {
     resp = responses[randomNumber]
     msg.channel.send(resp)
   }
+  else if (msg.content === '!doogdoogsleydoogertons') {
+    msg.channel.send('did you mean doggy?');
+  }
   
 });
