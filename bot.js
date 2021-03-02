@@ -29,7 +29,7 @@ bot.on('message', msg => {
         url: "https://www.twitch.tv/theoffbeats"
       });
 
-    var role = msg.guild.roles.find(role => role.name === "🔴 offbeats live now");
+    var role = msg.guild.roles.cache.get("🔴 offbeats live now");;
     bot.user.addRole(role)
   } else if (msg.content.startsWith('!notlive')) {
     bot.user.setActivity("offbeats", {
