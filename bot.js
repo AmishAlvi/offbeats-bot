@@ -43,7 +43,7 @@ bot.on('message', msg => {
     msg.channel.send('I love Mr Static');
   }
   
-  else if (message.isMemberMentioned(bot.user)) { 
+  else if (message.startsWith('!question')) { 
     randomNumber = Math.floor(Math.random()*responses.length);
     msg.channel.send(responses[randomNumber]);
   }
