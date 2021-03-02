@@ -9,6 +9,16 @@ bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 
+73
+
+var responses = [
+    'I can neither confirm nor deny',
+    'only wake the dreamer knows'
+];
+
+
+audioElement.setAttribute('src', textArray[randomNumber]);
+
 
 
 bot.on('message', msg => {
@@ -39,4 +49,10 @@ bot.on('message', msg => {
   } else if (msg.content === '!static') {
     msg.channel.send('I love Mr Static');
   }
+
+  else if (message.isMemberMentioned(client.user)) { 
+    randomNumber = Math.floor(Math.random()*textArray.length);
+    msg.channel.send(responses[randomNumber]);
+ }
+  
 });
