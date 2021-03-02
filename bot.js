@@ -9,11 +9,6 @@ bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 
-var responses = [
-    'I can neither confirm nor deny',
-    'only wake the dreamer knows'
-];
-
 bot.on('message', msg => {
   if (msg.content === 'hey offbeats bot') {
     msg.reply('hey, you are loved');
@@ -44,9 +39,10 @@ bot.on('message', msg => {
     var responses = [
       'I can neither confirm nor deny',
       'only wake the dreamer knows'
-  ];
-    randomNumber = Math.floor(Math.random()*responses.length);
-    msg.channel.send(responses[randomNumber]);
+    ]
+    randomNumber = Math.floor(Math.random()*responses.length)
+    resp = responses[randomNumber]
+    msg.channel.send(resp)
   }
   
 });
