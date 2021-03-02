@@ -1,6 +1,6 @@
 require('dotenv').config();
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+import { Client } from 'discord.js';
+const bot = new Client();
 const TOKEN = process.env.TOKEN;
 
 bot.login(TOKEN);
@@ -53,6 +53,6 @@ bot.on('message', msg => {
   else if (message.isMemberMentioned(client.user)) { 
     randomNumber = Math.floor(Math.random()*textArray.length);
     msg.channel.send(responses[randomNumber]);
- }
+  }
   
 });
