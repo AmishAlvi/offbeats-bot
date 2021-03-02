@@ -38,7 +38,11 @@ bot.on('message', msg => {
   else if (msg.content.startsWith('!question')) { 
     var responses = [
       'I can neither confirm nor deny',
-      'only wake the dreamer knows'
+      'only wake the dreamer knows',
+      'shady said no',
+      'no, but we should probably ban static just incase',
+      'who are you?',
+      'the real question is: why?'
     ]
     randomNumber = Math.floor(Math.random()*responses.length)
     resp = responses[randomNumber]
