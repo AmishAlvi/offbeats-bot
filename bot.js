@@ -1,6 +1,6 @@
 require('dotenv').config();
-import { Client } from 'discord.js';
-const bot = new Client();
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN;
 
 bot.login(TOKEN);
@@ -9,15 +9,11 @@ bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 
-73
-
 var responses = [
     'I can neither confirm nor deny',
     'only wake the dreamer knows'
 ];
 
-
-audioElement.setAttribute('src', textArray[randomNumber]);
 
 
 
