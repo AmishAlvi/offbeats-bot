@@ -9,6 +9,7 @@
   "author": "Syed Amish Alvi",
   "license": "ISC",
   "dependencies": {
+    "cleverbot-api-free": "^1.0.1",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
   }

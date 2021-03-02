@@ -2,6 +2,8 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN;
+const cleverbot = require("cleverbot-api-free");
+const client = new cleverbot();
 
 bot.login(TOKEN);
 
@@ -50,6 +52,17 @@ bot.on('message', msg => {
   }
   else if (msg.content === '!doogdoogsleydoogertons') {
     msg.channel.send('did you mean doggy?');
+  }
+  else if (msg.content.mentions(bot.user)) {
+    respo = ''
+    client.send(
+      "message",
+      async response => {
+          console.log(response);
+          respo = response
+      },
+    );
+    msg.channel.send(respo);
   }
   
 });

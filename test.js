@@ -1,7 +1,9 @@
-var responses = [
-    'I can neither confirm nor deny',
-    'only wake the dreamer knows'
-];
-  randomNumber = Math.floor(Math.random()*responses.length);
-  resp = responses[randomNumber]
-  console.log(resp)
+const cleverbot = require("cleverbot-api-free");
+const client = new cleverbot();
+
+client.send(
+    "message",
+    async response => {
+        console.log(response);
+    },
+);
