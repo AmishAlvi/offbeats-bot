@@ -44,7 +44,7 @@ bot.on('message', msg => {
   }
   
   if (message.isMemberMentioned(bot.user)) { 
-    randomNumber = Math.floor(Math.random()*textArray.length);
+    randomNumber = Math.floor(Math.random()*responses.length);
     msg.channel.send(responses[randomNumber]);
   }
   
