@@ -30,7 +30,8 @@ bot.on('message', msg => {
       });
     
     var role = msg.guild.roles.cache.get("🔴 offbeats live now");;
-    bot.user.roles.add(role).catch(console.error);
+    var member = bot.user
+    member.roles.add(role)
   } else if (msg.content.startsWith('!notlive')) {
     bot.user.setActivity("offbeats", {
         type: "GAME",
