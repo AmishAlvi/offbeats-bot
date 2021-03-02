@@ -24,19 +24,23 @@ bot.on('message', msg => {
       msg.reply('Please tag a valid user!');
     }
   } else if (msg.content.startsWith('!livenow')) {
+    msg.guild.member('815963913019457596').roles.add('686365392146530362').catch(console.error);
     bot.user.setActivity("offbeat", {
         type: "STREAMING",
         url: "https://www.twitch.tv/theoffbeats"
       });
-    
-    var role = msg.guild.roles.cache.get("🔴 offbeats live now");;
-    var member = bot.user
-    member.roles.add(role)
-  } else if (msg.content.startsWith('!notlive')) {
+    msg.guild.member('815963913019457596').roles.add('686365392146530362').catch(console.error);
+  }
+  else if (msg.content.startsWith('!notlive')) {
     bot.user.setActivity("offbeats", {
-        type: "GAME",
-        url: "https://www.twitch.tv/theoffbeats"
-      });
+      type: "GAME",
+      url: "https://www.twitch.tv/theoffbeats"
+    });
+    msg.guild.member('815963913019457596').roles.remove('686365392146530362').catch(console.error);
+    bot.user.setActivity("offbeats", {
+      type: "GAME",
+      url: "https://www.twitch.tv/theoffbeats"
+    });
   } else if (msg.content === '!static') {
     msg.channel.send('I love Mr Static');
   }
